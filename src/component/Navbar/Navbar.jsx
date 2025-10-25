@@ -186,7 +186,7 @@ export default function Navbar() {
                bg-gray-800 text-white text-sm px-2 py-1 rounded 
                opacity-0 group-hover:opacity-100 transition"
               >
-                {user.displayName || "No Name"}
+                {user.displayName || "No Names"}
               </span>
             </div>
           )}
