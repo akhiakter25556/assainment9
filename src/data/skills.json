@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "skillName": "Web Development",
+        "image": "https://i.ibb.co/qLzQNmf8/is-Web-Development-a-Good-Career.webp",
+        "rating": 4.8,
+        "price": 120
+    },
+    {
+        "id": 2,
+        "skillName": "Graphic Design",
+        "image": "https://i.ibb.co/XZyk2Z9q/20945567-1024x655.jpg",
+        "rating": 4.5,
+        "price": 90
+    },
+    {
+        "id": 3,
+        "skillName": "Video Editing",
+        "image": "https://i.ibb.co/h1CYX58x/video-editing-services-6373804-1280-1-1024x683.jpg",
+        "rating": 4.6,
+        "price": 100
+    }
+]
