@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-// import { useAuth } from "./component/AuthProvider/AuthProvider";
+// import { useAuth } from "/AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
+import { useAuth } from "../AuthProvider/AuthProvider";
 
 export default function MyProfile() {
   const { user, updateUserProfile, loading } = useAuth();

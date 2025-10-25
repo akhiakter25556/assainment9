@@ -1,64 +1,5 @@
-// // src/component/AuthProvider/AuthProvider.jsx
-// import { createContext, useContext, useEffect, useState } from "react";
-// import {
-//   onAuthStateChanged,
-//   signOut,
-//   signInWithPopup,
-//   GoogleAuthProvider,
-//   signInWithEmailAndPassword,
-//   createUserWithEmailAndPassword,
-// } from "firebase/auth";
-// import { auth } from "../../firebase";
+import { auth } from "../../firebase"; 
 
-// export const AuthContext = createContext();
-
-// export function useAuth() {
-//   return useContext(AuthContext);
-// }
-
-// export default function AuthProvider({ children }) {
-//   const [user, setUser] = useState(null);
-//   const [loading, setLoading] = useState(true);
-//   const googleProvider = new GoogleAuthProvider();
-
-//   // 🔹 email login
-//   const emailLogin = (email, password) =>
-//     signInWithEmailAndPassword(auth, email, password);
-
-//   // 🔹 signup
-//   const signup = (email, password) =>
-//     createUserWithEmailAndPassword(auth, email, password);
-
-//   // 🔹 Google login
-//   const googleLogin = () => signInWithPopup(auth, googleProvider);
-
-//   // 🔹 logout
-//   const logout = () => signOut(auth);
-
-//   // 🔹 auth state listener
-//   useEffect(() => {
-//     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-//       setUser(currentUser);
-//       setLoading(false);
-//     });
-//     return unsubscribe;
-//   }, []);
-
-//   const value = {
-//     user,
-//     emailLogin,
-//     googleLogin,
-//     signup,
-//     logout,
-//   };
-
-//   return (
-//     <AuthContext.Provider value={value}>
-//       {!loading && children}
-//     </AuthContext.Provider>
-//   );
-// }
-// src/component/AuthProvider/AuthProvider.jsx
 
 import { createContext, useContext, useEffect, useState } from "react";
 import {
@@ -72,7 +13,7 @@ import {
   sendPasswordResetEmail,
   updateProfile,
 } from "firebase/auth";
-import { auth } from "../../firebase"; // তোমার firebase config
+// import { auth } from "../../firebase"; // তোমার firebase config
 
 const AuthContext = createContext();
 export const useAuth = () => useContext(AuthContext);
@@ -110,6 +51,8 @@ return createUserWithEmailAndPassword(auth, email, password);
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, (u) => {
+      console.log(u);
+      
       setUser(u);
       setLoading(false);
     });
