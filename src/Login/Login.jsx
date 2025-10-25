@@ -140,9 +140,18 @@ export default function Login() {
             Forgot Password?
           </p>
 
-          <button type="submit" className="btn btn-primary w-full">
-            Login
-          </button>
+        
+          <button
+  type="submit"
+  className="w-full text-white font-semibold py-2 rounded-md transition-transform duration-200 hover:scale-105"
+  style={{
+    background: "linear-gradient(90deg, rgba(128,0,128,0.9), rgba(255,99,71,0.9))",
+    boxShadow: "0 4px 10px rgba(128,0,128,0.3)",
+  }}
+>
+  Login
+</button>
+
         </form>
 
         {/* Google Login */}

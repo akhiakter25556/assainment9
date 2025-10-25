@@ -317,11 +317,28 @@ export default function Signup() {
 
           {error && <p className="text-red-500 text-sm">{error}</p>}
 
-          <button type="submit" className="btn btn-primary w-full">Register</button>
+    
+
+<button
+  type="submit"
+  className="w-full text-white font-semibold py-2 rounded-md
+   transition-transform duration-200 hover:scale-105"
+  style={{
+    background: "linear-gradient(90deg, rgba(128,0,128,0.9), rgba(255,99,71,0.9))",
+    boxShadow: "0 4px 10px rgba(128,0,128,0.3)",
+  }}
+>
+  Register
+</button>
+
+
         </form>
 
         <div className="mt-4">
           <button onClick={handleGoogle} className="btn btn-outline w-full">Continue with Google</button>
+
+
+          
         </div>
 
         <p className="text-center mt-4 text-sm">

@@ -47,6 +47,9 @@ export default function Home() {
                      text-lg font-medium hover:bg-green-700 transition"
                   >
                     View Details
+
+
+                    
                   </Link>
                 </div>
               </div>
@@ -54,6 +57,12 @@ export default function Home() {
           ))}
         </Swiper>
       </section>
+
+
+
+
+
+
 
       {/* ✅ POPULAR SKILLS SECTION */}
       <section data-aos="fade-up">
@@ -77,13 +86,24 @@ export default function Home() {
                 <Star size={16} /> {skill.rating}
               </p>
               <p className="text-gray-700">Price: ${skill.price}</p>
-              <Link
+              {/* <Link
                 to={`/skill/${skill.id}`}
                 className="mt-auto bg-indigo-600 text-white px-3 py-2
                 rounded text-center hover:bg-indigo-700 transition"
               >
                 View Details
-              </Link>
+              </Link> */}
+
+<Link
+  to={`/skill/${skill.id}`}
+  className="mt-auto bg-indigo-600 text-white px-3 py-2 rounded text-center 
+  hover:bg-indigo-700 active:bg-purple-700 transition-all duration-200 
+  shadow-md hover:shadow-lg active:scale-95"
+>
+  View Details
+</Link>
+
+
             </div>
           ))}
         </div>
