@@ -17,7 +17,7 @@ const Support = () => {
 
         {/* Right Content */}
         <div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6"> <span className="text-pink-500">S</span>upport</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6"> <span className="text-pink-500">S</span>upports</h2>
 
           <p className="text-lg mb-4">
             FAQ, Tutorials, and Live Chat support coming soon.
