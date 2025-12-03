@@ -1,13 +1,11 @@
 
-
-// src/pages/Home.jsx
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import skillsData from "../data/skills.json"; // তোমার JSON ডাটা
+import skillsData from "../data/skills.json"; 
 import { Star } from "lucide-react";
 
 export default function Home() {
@@ -19,7 +17,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 mt-20 space-y-16">
+    <div className="container mx-auto px-2 space-y-16">
       {/* ✅ HERO SLIDER */}
       <section className="relative">
         <Swiper
@@ -31,25 +29,36 @@ export default function Home() {
           {skills.slice(0, 6).map((skill, i) => (
             <SwiperSlide key={i}>
               <div className="relative h-[60vh] flex items-center justify-center">
-                <img
-                  src={skill.image}
-                  alt={skill.skillName}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black/40"></div>
+            <img
+  src="https://i.ibb.co/n8zjJqL0/flowers-background-23-2148011049.jpg"
+  alt="Skill Background"
+  className="absolute inset-0 w-full h-full "
+/>
+            <img
+  src="https://i.ibb.co/xSmp3YnV/young-fashion-smiling-hipster-man-city-cafe-lunch-time-with-notebook-suit-158538-8052.jpg"
+  alt="Skill Background"
+  className="absolute inset-0 w-full h-full "
+/>
+            <img
+  src="https://i.ibb.co/n8zjJqL0/flowers-background-23-2148011049.jpg"
+  alt="Skill Background"
+  className="absolute inset-0 w-full h-full "
+/>
+
+                <div className="absolute inset-0 bg-black/10"></div>
                 <div className="relative text-center text-white z-10 px-4">
                   <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
                     Master {skill.skillName} Today!
                   </h1>
                   <Link
                     to={`/skill/${skill.id}`}
-                    className="bg-green-600 px-6 py-3 rounded-lg
-                     text-lg font-medium hover:bg-green-700 transition"
+                    className="bg-gradient-to-r from-black to-pink-400  px-6 py-3 rounded-lg
+                     text-lg font-medium  transition"
                   >
                     View Details
 
 
-                    
+                
                   </Link>
                 </div>
               </div>
@@ -59,28 +68,24 @@ export default function Home() {
       </section>
 
 
-
-
-
-
-
       {/* ✅ POPULAR SKILLS SECTION */}
       <section data-aos="fade-up">
         <h2 className="text-3xl font-bold mb-6 text-center">
-          Popular <span className="text-indigo-600">Skills</span>
+          Popular <span className="text-pink-400">Skills</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {skills.map((skill) => (
             <div
-              key={skill.id}
+              key={skills.id}
               className="bg-white shadow rounded-lg p-4 flex
                flex-col hover:shadow-lg transition"
             >
-              <img
-                src={skill.image}
-                alt={skill.skillName}
-                className="w-full h-40 object-cover rounded"
-              />
+           <img
+  src="https://i.ibb.co/xSmp3YnV/young-fashion-smiling-hipster-man-city-cafe-lunch-time-with-notebook-suit-158538-8052.jpg"
+  alt="Skill Name"
+  className="w-full h-40 object-cover rounded"
+/>
+
               <h3 className="mt-3 text-lg font-bold">{skill.skillName}</h3>
               <p className="flex items-center gap-1 text-yellow-500">
                 <Star size={16} /> {skill.rating}
@@ -96,8 +101,9 @@ export default function Home() {
 
 <Link
   to={`/skill/${skill.id}`}
-  className="mt-auto bg-indigo-600 text-white px-3 py-2 rounded text-center 
-  hover:bg-indigo-700 active:bg-purple-700 transition-all duration-200 
+  className="mt-auto bg-gradient-to-r from-black to-pink-400
+    text-white px-3 py-2 rounded text-center 
+  hover:bg-pink-300 active:bg-pink-400 transition-all duration-200 
   shadow-md hover:shadow-lg active:scale-95"
 >
   View Details
@@ -112,7 +118,7 @@ export default function Home() {
       {/* ✅ TOP RATED PROVIDERS */}
       <section data-aos="fade-up">
         <h2 className="text-3xl font-bold mb-6 text-center">
-          Top Rated <span className="text-indigo-600">Providers</span>
+          Top Rated <span className="text-pink-400">Providers</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
@@ -157,7 +163,7 @@ export default function Home() {
       {/* ✅ HOW IT WORKS SECTION */}
       <section data-aos="fade-up">
         <h2 className="text-3xl font-bold mb-6 text-center">
-          How It <span className="text-indigo-600">Works</span>
+          How It <span className="text-pink-400">Works</span>
         </h2>
         <div className="grid md:grid-cols-3 gap-6 text-center">
           <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
@@ -183,3 +189,5 @@ export default function Home() {
     </div>
   );
 }
+
+

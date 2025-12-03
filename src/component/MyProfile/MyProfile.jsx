@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-// import { useAuth } from "/AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
-import { useAuth } from "../AuthProvider/AuthProvider";
+import { useAuth } from "../../hooks/useAuth";
+
 
 export default function MyProfile() {
   const { user, updateUserProfile, loading } = useAuth();
@@ -17,8 +17,8 @@ export default function MyProfile() {
     }
   }, [user]);
 
-  if (loading) return <p>লোড হচ্ছে...</p>;
-  if (!user) return <p>লগইন করা নেই।</p>;
+  if (loading) return <p>Loding</p>;
+  if (!user) return <p>do not Login</p>;
 
   const handleUpdate = async (e) => {
     e.preventDefault();
